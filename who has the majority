@@ -1,0 +1,26 @@
+#User function Template for python3
+
+class Solution:
+    #Function to find element with more appearances between two elements in an array.    
+    def majorityWins(self, arr, n, x, y):
+        countx=0
+        county=0
+        for i in arr:
+            if i==x:
+                countx+=1
+                
+            elif i==y:
+                county+=1
+                
+        if countx > county:
+            return x
+                
+        elif countx < county:
+            return y
+                
+        else:
+            return min(x,y)
+                
+            
+        
+    
